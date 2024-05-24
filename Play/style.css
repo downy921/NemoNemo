@@ -1,0 +1,90 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+div{
+    width: 100%;
+}
+
+
+#wrapper{
+    margin:0 auto;
+    width : 100vw;
+    max-width: 800px;
+    height : 100vh;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+
+    padding: 0;
+}
+
+.tmpHeight{
+    height:3em;
+}
+
+#menu{
+    background-color: yellow;
+}
+
+#footer{
+    background-color: blueviolet;
+}
+
+#playDivision{
+   height: 100%;
+   padding-left: 5%;
+   padding-right: 5%;
+   box-sizing: border-box;
+}
+
+#gridSection {
+    padding-bottom: 100%;
+    position:relative
+}
+
+#gridSection #inner{
+    position:absolute;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+
+}
+
+#inner .leftRight{
+    display: flex;
+    flex-direction:column;
+    height: 100%;
+}
+
+#inner .left{
+    width:8%;
+    background-color: aquamarine;
+}
+
+#inner .right{
+    width: 100%;
+}
+
+#inner .topBottom{
+    width: 100%;
+}
+
+#inner .top{
+    height: 8%;
+    
+}
+
+#inner .bottom{
+    height: 100%;
+}
+
+.left .top{
+    background-color: #AAAAFF;
+}
+
+#grid{
+    background-color: white;
+}
+
