@@ -4,54 +4,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <link rel="stylesheet" href="coloring.css" />
+    <link rel="stylesheet" href="font.css" />  
     <link rel="stylesheet" href="style.css" />
     <title>플레이 화면</title>
 </head>
 <body>
+    <div id="wrapper" class="rowFlex height100vh">
 
-    <div id="out">
-        <div id="wrapper" >
-            
-            <div id="menu" class="tmpHeight">menu</div>
-            <div id="playDivision">
-                
-                <div id="gridSection"><div id="inner">
-                    <div class="left leftRight">
-                        <div class="top topBottom">LT</div>
-                        <div id="infoRow" class="bottom topBottom">IR</div>
+        <div id="menu" class="smallFont colFlex">
+            <div id="menuButtonSection" class="inlineCover menu leftSide">
+                <img id="settingButton" class="small icon inline" src="../Icon/setting.png"> 
+                <img id="homeButton" class="small icon inline" src="../Icon/home.png">
+                <img id="backButton" class="small icon inline" src="../Icon/back.png"> 
+            </div>
+            <div id="profileSection" class="inlineCover menu rightSide">
+                <img id="profile" class="small icon inline" src="../DataBase/정다은.jpg">
+                <p id="userName" class="inline">정다은</p>
+            </div>
+        </div>
+        
+        <div  id="middle" class="rowFlex height100vh">
+            <div id="restHint" class="smallFont inlineCover centerSide">
+                <img id="restHint1" class="small inline" src="../Icon/hintLeft.png"> 
+                <img id="restHint2" class="small inline" src="../Icon/hintLeft.png"> 
+                <img id="restHint3" class="small inline" src="../Icon/hintUsed.png"> 
+            </div>
+            <div id="titleSection" class="bigFont inlineCover centerSide">
+                    <div></div>
+                    <div id="title">
+                        Logic
                     </div>
-                    <div class="right leftRight">
-                        <div id="infoCol" class="top topBottom">IC</div>
-                        <div id="grid" class="bottom topBottom">
-                            grid
+                    <div class="inlineCover leftSide">
+                        <label id="hintCover" class="inlineCover">
+                            <input type="checkbox" id="hint">
+                            <img id="hintButton" class="small icon smallFont" src="../Icon/hint.png">
+                        </label>
+
+                        <img id="resetButton" class="small icon smallFont" src="../Icon/reset.png">
+                    </div>
+                   
+            </div>
+
+
+            <div id="reactiveSection" class="reactiveFlex">
+                <div id="leftSection" class="downSideCover">
+                    
+                </div>
+
+                <div id="gameSection" class="downSideCover">
+                    <div id="gameCover" class="downSide">
+                        <div id="gameUpper" class="colFlex">
+                            <div id="blankSpace" class="border bottomBorder rightBorder">
+
+                            </div>
+                            <div id="colInfo" class="colFlex">
+                                
+                            </div>
+                        </div>
+                        <div id="gameLower" class="colFlex">
+                            <div id="rowInfo">
+                                
+                            </div>
+                            <div id="gameGrid">
+                                
+                            </div>
                         </div>
                     </div>
-                </div> </div> <!--gridSection -->
+                </div>
 
-                <div id="buttonSection" class="tmpHeight">
-                        버튼들 들어가는 곳
-                </div> <!--buttonSection -->
+                <div id="rightSection"  class="downSideCover">
+                    <div class="normalFont downSide buttonSection">
+                        <div id="BWbuttonSection">
+                            <div class="inlineCover centerSide"> 
+                               
+                                <label class="switch">
 
-            </div> <!-- playDivision -->
+                                    <input type="checkbox" id="marking">
+                                    <span class="slider"></span>
 
-            <div id="footer" class="tmpHeight">footer</div>
+                                    <span id="black"></span>
+                                    <span id="blank"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- 중간 부분 -->
 
-        </div><!-- wrapper -->
-    </div> <!-- out -->
+        </div>
+        
+        <div id="footer" class="normalFont"> </div>
+
+    </div>
+
+    <!-- sample data 들어있는 파일 -->
+    <script src="../Data/sample_data.js" type="text/javascript"></script>
+    <!-- data를 받아와서 원하는 상태로 가공하기 위한 함수 -->
+    <script src="../Data/data_process.js" type="text/javascript"></script>
+    <!-- data를 받아와서, 실제로 가공, 변환, 필요한 정보 저장 -->
+    <script src="../Data/data_loading.js" type="text/javascript"></script>
+
+    <!-- 페이지 세팅 -->
+    <script src="../JavaScript/dataSetting.js" type="text/javascript"></script>
 
 
-<script src="../Data/sample_data.js" type="text/javascript"></script>
-<script src="../Data/data_process.js" type="text/javascript"></script>
-<script src="../Data/data_loading.js" type="text/javascript"></script>
-
-<script src="../Javascript/importPage.js" type="text/javascript"></script>
-
-<script src="style.js" type="text/javascript"></script>
-
-
-<script>
-    
-</script>
-    
 </body>
 </html>

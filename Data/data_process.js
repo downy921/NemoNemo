@@ -1,3 +1,4 @@
+// 게임 인덱스에서부터 가로 세로 몇번째에 있는 게임인지 반환
 function get_row_col_index(whole_size, game_size, game_index){
    
     var one_row=parseInt(whole_size/game_size);
@@ -6,17 +7,19 @@ function get_row_col_index(whole_size, game_size, game_index){
     return [parseInt(game_index/one_row), parseInt(game_index%one_row)];
 }
 
+// 전체 배열로부터 게임 인덱스에 해당하는 작은 배열 반환
 function get_mini_array(array, game_index, game_size){
     var [ri, ci]=get_row_col_index(array.length, game_size, game_index);
     var mini_array=[]
 
     for(var i=0; i<game_size; i++){
-        mini_array.push(array[ri+i].slice(ci, ci+game_size));
+        mini_array.push(array[ri*game_size+i].slice(ci*game_size, ci*game_size+game_size));
     }
 
     return mini_array;
 }
 
+// row info, col info 계산
 function get_info(mini_answer_array, game_size){
     var max_size=parseInt(game_size/2)+1;
 
